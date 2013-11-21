@@ -1,7 +1,7 @@
 // Project Euler Problem_2: http://projecteuler.net/problem=2
 
 // After much tinkering, I got the Fibonacci sequence (up to 4e6) to print properly under
-// the 'z' value.
+// the 'x' value.
 // I played with using 'console.log("X: " + x + "|Y: " + y + "|Z: " + z);' as line_12 
 // in order to see if the numbers were coming out properly across the board. Interestingly
 // enough, at times certain variables were outputting the proper, expected values without all
