@@ -1,0 +1,21 @@
+// Project Euler Problem_2: http://projecteuler.net/problem=2
+
+// After much tinkering, I got the Fibonacci sequence (up to 4e6) to print properly under
+// the 'z' value.
+// I played with using 'console.log("X: " + x + "|Y: " + y + "|Z: " + z);' as line_12 
+// in order to see if the numbers were coming out properly across the board. Interestingly
+// enough, at times certain variables were outputting the proper, expected values without all
+// variables being correct. I don't know how it was broke-working like that.
+
+function fibonacci(){
+    var x = 1;
+    var y = 0;
+    var z = 1;
+    for (count=0; z<(4e6); count++) {
+    console.log(z);
+    y = x
+    x = z
+    z = x + y;
+    }
+}
+fibonacci();
