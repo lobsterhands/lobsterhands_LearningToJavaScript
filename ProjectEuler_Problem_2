@@ -19,3 +19,25 @@ function fibonacci(){
     }
 }
 fibonacci();
+
+// After solving the problem up to the step posted above, the final solution came quickly:
+
+function fibonacci(){
+    var x = 1;
+    var y = 0;
+    var z = 1;
+    var sum = 0;
+    for (count=1; z<(4e6); count++) {
+    if (z%2 === 0) {
+        console.log(z);
+        sum = sum + z;
+        }
+    y = x;
+    x = z;
+    z = x + y;
+    }
+console.log("The sum of these numbers is: " +sum);
+}
+fibonacci();
+
+// I"m sure this is a long way of going about writing this program, but it's what I've got. -lh
