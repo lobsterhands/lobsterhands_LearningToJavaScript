@@ -1,0 +1,16 @@
+// The prime factors of 13195 are 5, 7, 13 and 29
+// What is the largest prime factor of the number 600851475143??
+
+// The following is what I've come up with so far. On a good note,
+// it is printing 5, 7, 13 and 29. BUT then it continues to print non-prime
+// numbers: 35, 65, 145, etc etc. Work continues.
+
+function prime(x) {
+	for (count = 2; count < x; count++) {
+		if (x%2 !== 0 && x%3 !== 0 && x%count === 0) {
+			print(count)
+		}
+	}
+}
+
+prime(13195);
