@@ -5,7 +5,7 @@
 // it is printing 5, 7, 13 and 29. BUT then it continues to print non-prime
 // numbers: 35, 65, 145, etc etc. Work continues.
 
-function prime(x) {
+function primeFactor(x) {
 	for (count = 2; count < x; count++) {
 		if (x%2 !== 0 && x%3 !== 0 && x%count === 0) {
 			print(count)
@@ -13,4 +13,17 @@ function prime(x) {
 	}
 }
 
-prime(13195);
+primeFactor(13195);
+
+//--------------------------------------------------------------------------------
+// Phase 2, to get an idea of how (maybe) the program should be filtering numbers:
+
+function primeFactor(number) {
+	if (number%2 !== 0 && number%3 !== 0 && number%5 !== 0)
+		print(number)
+	else 
+		print("The number " + number + " factors all the way.")
+}
+
+primeFactor(4)
+primeFactor(7)
