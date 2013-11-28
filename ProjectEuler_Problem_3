@@ -67,4 +67,20 @@ function primeFactor(goal) {
 primeFactor(210);
 
 // But, primeFactor(100) is still printing 2, 5, 10... Work continues.
+// ----------------------------------------------------------------------------
 
+// The answer was not long in coming after the last update. Because primeFactor(100)
+// kept printing 2, 5 and 10, I knew I had to get the loop to run all over (resetting
+// the count in the process), and I threw in the return(primeFactor(goal)) line.
+// This seems to work with all numbers now. Yes!
+
+function primeFactor(goal) {
+    for (count = 2; goal > 1; count++) {
+            if (goal%count === 0) {
+            	print(count)
+            	goal = goal/count
+            	return(primeFactor(goal))
+            }
+    }
+}
+primeFactor(100);
