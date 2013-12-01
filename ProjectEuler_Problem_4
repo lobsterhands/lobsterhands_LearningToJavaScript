@@ -1,3 +1,29 @@
 //Problem: A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit 
 //numbers is 9009, which is 91 times 99 . Find the largest palindrome made from the product of two 3-digit numbers.
 //-------------------------------------------------------------------------------------------------------------------
+
+// This was relatively easy. In a previous exercise I learned how to write a function that reverses a number or string.
+// I just plugged that program [function palindrome(num)] into this one. I think this is pretty clean and I'm proud of 
+// how quickly I figured out what I needed to do. Getting it to work right was still a bit touch-n-go.
+
+
+function palindrome(num) {
+	var digits = num.toString().split("");
+    var rev = digits.reverse("");
+    reverse = rev.join("");
+}
+
+for (count1=999; count1>=900; count1--) {
+	for (count2=999; count2>900; count2--) {
+	x = count1*count2
+	y = palindrome(x)
+		if (x == reverse) {
+			console.log(x + "     " + count1 + "      " + count2)
+			return x
+		}
+	}
+}
+
+// One issue: I'd like to condense lines 11-13 to read: var digits = num.toString().split("").reverse("").join(""); 
+// However, when I try that, (and plug in 'digits' instead of 'reverse' on line 20) I get 'ReferenceError: digits
+// is not defined'. Oh well. This works.
