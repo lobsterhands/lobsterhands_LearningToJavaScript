@@ -31,7 +31,7 @@ for (count1=999; count1>=900; count1--) {
 
 // Changed the program a bit after reading another JS solution. This one is a bit more straightforward since
 // it just counts up to the highest possible solution instead of worrying about counting down. I don't have to
-// already know the answer I'm looking for and then limit the programs numbers accordingly in order to get the
+// already know the answer I'm looking for and then limit the program's numbers accordingly in order to get the
 // right number. So, a better solution looks like this:
 
 function palindrome(num) {
