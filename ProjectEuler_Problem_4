@@ -27,3 +27,31 @@ for (count1=999; count1>=900; count1--) {
 // One issue: I'd like to condense lines 11-13 to read: var digits = num.toString().split("").reverse("").join(""); 
 // However, when I try that, (and plug in 'digits' instead of 'reverse' on line 20) I get 'ReferenceError: digits
 // is not defined'. Oh well. This works.
+//-------------------------------------------------------------------------------------------------------------------
+
+// Changed the program a bit after reading another JS solution. This one is a bit more straightforward since
+// it just counts up to the highest possible solution instead of worrying about counting down. I don't have to
+// already know the answer I'm looking for and then limit the programs numbers accordingly in order to get the
+// right number. So, a better solution looks like this:
+
+function palindrome(num) {
+        var digits = num.toString().split("");
+    var rev = digits.reverse("");
+    reverse = rev.join("");
+}
+
+var biggestPalindrome = 0;
+var num1
+var num2
+for (count1=1; count1<=999; count1++) {
+        for (count2=1; count2<=999; count2++) {
+        x = count1*count2;
+        y = palindrome(x);
+                if (x == reverse && x > biggestPalindrome) {
+                	biggestPalindrome = x;
+                	num1 = count1
+                	num2 = count2
+                }
+        }
+}
+console.log(biggestPalindrome + " is the result of " + num1 + " * " + num2)
