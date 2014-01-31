@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+  <title>Guessing Game</title>
+    <script type="text/javascript">
+    var count = 0;
+    var theNumber = Math.floor(Math.random()*100+1);
+    function checkguess() {
+      var guess = document.getElementById('guess');
+      var output = document.getElementById('output')
+      var myNumber = guess.value;
+      if (myNumber < theNumber) {
+        count += 1
+        output.value = "Too low. Try again."
+      } else if (myNumber > theNumber) {
+          count += 1
+          output.value = "Too high. Try again."
+      } else {
+          count += 1
+          output.value = "You guessed the number! It only took you " + count + " guesses."
+      }
+    }
+    </script>
+</head>
+
+<body><h2>Guessing Game</h2>
+  <form>
+    I'm thinking of a number between 1 and 100. Take a guess:
+    <input id="guess" type="text" size="8" /><br/>
+    <input type="button" value="Guess" onclick="checkguess()" /><br/>
+    <input id="output" type="text" size="40" /><br/>
+  </form>
+</body>
