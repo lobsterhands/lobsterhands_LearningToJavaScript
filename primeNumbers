@@ -1,0 +1,10 @@
+for (i = 2; i <= 100; i++) {
+  for (j = 2; j <= i; j++) {
+    if (i % j === 0 && j === i) {
+      console.log(i);
+    }
+    else if (i % j === 0 && j !== i) {
+      break;
+    }
+  }
+}
